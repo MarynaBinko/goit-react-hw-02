@@ -1,13 +1,13 @@
 
-const Options = ({handleGoodClick, handleNeutralClick, handleBadClick}) => {
+const Options = ({ updateFeedback }) => {
 
 
 
   return (
     <div>
-      <button onClick= {handleGoodClick}>Good</button>
-      <button onClick= {handleNeutralClick}>Neutral</button>
-      <button onClick= {handleBadClick}>Bad</button>
+      <button onClick= {() => updateFeedback("good")}>Good</button>
+      <button onClick= {() => updateFeedback("neutral")}>Neutral</button>
+      <button onClick= {() => updateFeedback("bad")}>Bad</button>
     </div>
   )
 }

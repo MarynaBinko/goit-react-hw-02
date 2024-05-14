@@ -10,37 +10,24 @@ function App() {
     good: 0,
     neutral: 0,
     bad: 0
-});
+  });
 
-const handleGoodClick = ()=>{
-  setOptionsType((prevOptionsType) => ({
-  ...prevOptionsType,
-  good: prevOptionsType.good + 1
-}))};
-
-const handleNeutralClick = ()=>{
-setOptionsType((prevOptionsType) => ({
-  ...prevOptionsType,
-  neutral: prevOptionsType.neutral + 1
-}))};
-
-
-const handleBadClick = ()=>{
-setOptionsType((prevOptionsType) => ({
-  ...prevOptionsType,
-  bad: prevOptionsType.bad + 1
-}))
-}
+  const updateFeedback = feedbackType => {
+    setOptionsType(prevOptionsType => ({
+      ...prevOptionsType,
+      [feedbackType]: prevOptionsType[feedbackType] + 1
+    }));
+  };
 
   return (
-    <>
-     <Description />
-     <Options  handleGoodClick={handleGoodClick} 
-               handleNeutralClick={handleNeutralClick} 
-               handleBadClick={handleBadClick} />
-     <Feedback optionsType={optionsType} />
-    </>
-  )
+    <div>
+      <Description />
+      <Options updateFeedback={updateFeedback} />
+      <Feedback optionsType={optionsType} />
+    </div>
+  );
 }
+
+
 
 export default App
