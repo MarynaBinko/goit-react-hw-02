@@ -1,9 +1,8 @@
 
 // import { useEffect } from "react";
 
-const Feedback = ( {optionsType} ) => {
-  const { good, neutral, bad } = optionsType;
-    
+const Feedback = ( {optionsType, totalFeedback, positiveFeedback} ) => {
+ 
     
 
  
@@ -15,12 +14,15 @@ const Feedback = ( {optionsType} ) => {
 
   return (
     <div>
-    
+      
       <ul>
-        <li>Good: {good}</li>
-        <li>Neutral:{neutral} </li>
-        <li>Bad:{bad} </li>
+        <li>Good: {optionsType.good}</li>
+        <li>Neutral:{optionsType.neutral} </li>
+        <li>Bad:{optionsType.bad} </li>
       </ul>
+      <h2>Feedback Statistics</h2>
+      <p>Total Feedback: {totalFeedback}</p>
+      <p>Percentage of Positive Feedback: {positiveFeedback}%</p>
     </div>
   )
 }
