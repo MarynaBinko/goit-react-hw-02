@@ -1,17 +1,7 @@
 
-// import { useEffect } from "react";
 
 const Feedback = ( {optionsType, totalFeedback, positiveFeedback} ) => {
  
-    
-
- 
-
-    // useEffect(() => {
-    //     document.title = `You clicked ${clicks} times`;
-    //   },[clicks]);
-
-
   return (
     <div>
       
