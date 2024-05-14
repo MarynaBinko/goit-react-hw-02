@@ -1,11 +1,26 @@
 
+// import { useEffect } from "react";
 
-const Feedback = () => {
+const Feedback = ( {optionsType} ) => {
+  const { good, neutral, bad } = optionsType;
+    
+    
+
+ 
+
+    // useEffect(() => {
+    //     document.title = `You clicked ${clicks} times`;
+    //   },[clicks]);
+
+
   return (
     <div>
-      <button>Good</button>
-      <button>Neutral</button>
-      <button>Bad</button>
+    
+      <ul>
+        <li>Good: {good}</li>
+        <li>Neutral:{neutral} </li>
+        <li>Bad:{bad} </li>
+      </ul>
     </div>
   )
 }
