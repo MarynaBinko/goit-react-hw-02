@@ -1,0 +1,35 @@
+.feedback{
+    border: 1px solid #000; 
+    border-radius: 10px;
+   
+}
+
+.feedback .list{
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+
+    /* display: flex;
+    flex-direction: column;  
+    justify-content: start;   */
+}
+
+.feedback .listItem{   
+  margin-bottom: 5px;
+  padding-left: 20px;
+}
+
+.feedback .title{
+    font-weight: 100px;
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.feedback .feed{    
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
